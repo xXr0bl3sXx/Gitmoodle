@@ -42,11 +42,12 @@ Si vas a usar MySQL/MariaDB, asegúrate de configurarlo y crear la base de datos
 
 ## 4. Instalar Node.js (versión recomendada)
 
-Ghost requiere una versión compatible de Node.js. Para 2025 se recomiendan Node 18 LTS o Node 20 dependiendo de la versión de Ghost. Aquí instalamos Node 18 LTS:
+Ghost requiere una versión compatible de Node.js. Aquí instalamos la última disponble:
 
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt install -y nodejs
+NODE_MAJOR=22
+curl -sL https://deb.nodesource.com/setup_$NODE_MAJOR.x -o nodesource_setup.sh
+bash nodesource_setup.sh
 
 node -v
 npm -v
